@@ -15,7 +15,7 @@ class Game:
         """
         return self.moves[p]
 
-    def player(self, player, move):
+    def play(self, player, move):
         self.moves[player] = move
         if player == 0:
             self.p1Went = True
@@ -42,11 +42,11 @@ class Game:
         elif p1 == "R" and p2 == "P":
             winner = 1
         elif p1 == "S" and p2 == "P":
-            winner = 1
+            winner = 0
         elif p1 == "P" and p2 == "S":
             winner = 1
         return winner
 
-    def reserWent(self):
+    def resetWent(self):
         self.p1Went = False
         self.p2Went = False
